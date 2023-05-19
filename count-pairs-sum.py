@@ -1,8 +1,8 @@
-def count_pairs(lst, target):
+def count_pairs(numbers, target):
     count = 0
     num_dict = {}
 
-    for num in lst:
+    for num in numbers:
         complement = target - num
         if complement in num_dict:
             count += num_dict[complement]
@@ -11,8 +11,8 @@ def count_pairs(lst, target):
     return count
 
 # Example usage:
-lst = [2, 3, 5, 7, 8]
+numbers = [2, 3, 5, 7, 8]
 target = 10
 
-result = count_pairs(lst, target)
+result = count_pairs(numbers, target)
 print(result)
